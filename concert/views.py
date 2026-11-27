@@ -22,14 +22,14 @@ def index(request):
 
 
 def songs(request):
-    # songs = {"songs":[]}
-    # return render(request, "songs.html", {"songs": [insert list here]})
+    songs = req.get("https://marysegahou-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/song").json()
+    return render(request, "songs.html", {"songs": songs["songs"]})
     pass
 
 
 def photos(request):
-    # photos = []
-    # return render(request, "photos.html", {"photos": photos})
+    photos = req.get("https://marysegahou-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/picture").json()
+    return render(request, "photos.html", {"photos": photos})
     pass
 
 def login_view(request):
