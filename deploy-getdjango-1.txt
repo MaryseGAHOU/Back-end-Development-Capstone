@@ -1,0 +1,48 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 502B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.9.16-slim
+#2 DONE 0.3s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/7] FROM docker.io/library/python:3.9.16-slim@sha256:d43e0583637052c35496fd5e20f1e0a6f0897666430e00af7e26683a4774979a
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 684.48kB 0.6s done
+#5 DONE 0.7s
+
+#6 [2/7] RUN apt-get update     && apt-get install -y netcat
+#6 CACHED
+
+#7 [3/7] WORKDIR /app
+#7 CACHED
+
+#8 [4/7] COPY requirements.txt /app
+#8 CACHED
+
+#9 [5/7] RUN pip3 install -r requirements.txt
+#9 CACHED
+
+#10 [6/7] COPY . /app
+#10 DONE 3.5s
+
+#11 [7/7] RUN chmod +x /app/entrypoint.sh
+#11 DONE 0.2s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 1.7s done
+#12 writing image sha256:e97bfc80c9e88c0146e8d50b0497eda0528231a42fc68364971300a073bd6970 done
+#12 naming to docker.io/library/djangoserver done
+#12 DONE 1.7s
+
+ [33m2 warnings found (use docker --debug to expand):
+[0m - LegacyKeyValueFormat: "ENV key=value" should be used instead of legacy "ENV key value" format (line 3)
+ - LegacyKeyValueFormat: "ENV key=value" should be used instead of legacy "ENV key value" format (line 4)
